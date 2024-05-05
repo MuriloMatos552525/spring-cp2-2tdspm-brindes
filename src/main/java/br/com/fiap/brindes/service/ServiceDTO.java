@@ -3,6 +3,11 @@ package br.com.fiap.brindes.service;
 
 import org.springframework.data.domain.Example;
 
+import br.com.fiap.brindes.dto.request.CategoriaRequest;
+import br.com.fiap.brindes.dto.request.ProdutoRequest;
+import br.com.fiap.brindes.dto.response.CategoriaResponse;
+import br.com.fiap.brindes.dto.response.ProdutoResponse;
+
 import java.util.Collection;
 
 /**
@@ -57,6 +62,10 @@ public interface ServiceDTO<Entity, Request, Response> {
      * @return
      */
     public Response toResponse(Entity e);
+
+	CategoriaResponse save(CategoriaRequest request);
+
+	ProdutoResponse save(ProdutoRequest request);
 
 
 }
